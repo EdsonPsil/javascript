@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Detran</title>
+</head>
+<style>
+  body{
+    background-color: cadetblue;
+  }
+  div {
+    font-size: 18pt;
+    color: darkblue;
+    background-color: white;
+    width: 520px;
+    margin: -10px;
+    margin-top: -24px;
+  }
+  #caixa{
+    font-size: 15pt;
+    background-color: aqua;
+    height: 40px;
+    width: 500px;
+    margin: 0px -10px 0px -10px;
+    text-align: center;
+ 
+    
+  }
+  p{
+    padding-left: 20px;
+  }
+  .multa{
+    color: rgb(167, 21, 21);
+  }
+</style>
+<body>
+  <h1>Sistema de multas</h1>
+  <p id="caixa">Velocidade do veículo: <input type="number" name="txtvel" id="txtvel">
+  KM/h <input type="button" value="verificar" onclick="calcular()"></p> 
+  <div id="res">
+    <!-- Esta dive foi criada para escrever conteudo do innerhtml do js-->
+  </div>
+  <script>
+    function calcular(){ //esta funçao será executada ao apertar o button 
+      var txtv = document.getElementById('txtvel')
+      var res = document.querySelector('div#res')
+      var vel = Number(txtv.value)
+      res.innerHTML = `<p>Sua velocidade atual é de ${vel}KM/h</p>`
+      if(vel > 60){
+        res.innerHTML +='<p>Você ultrapassou o limite de velocidade. Multado!</p>'
+        res.innerHTML +=`<p class="multa">O valor da multa é <strong>R$${vel*.50}</strong></P>`
+      }
+      res.innerHTML += '<p>Dirija sempre com cinto de segurança!</p>'//para escrever o segundo parágrafo deve usar o sinal += para concatenar ou ele substituirá o primeiro
+    }
+  </script>
+</body>
+</html>

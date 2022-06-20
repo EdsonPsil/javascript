@@ -1,0 +1,11 @@
+let num = [5, 8, 2, 9, 3]
+num[3] = 4 //muda o valor de uma posição dentro do vetor
+num.push(7)// inclui um valor em uma nova posição do vetor
+num.sort()//coloca os numeros em ordem crescente
+console.log(num)
+console.log(`nosso vetor tem ${num.length} posições`)//conta a quantidade de posições do vetor
+console.log(num[0])//mostra o conteudo da primeira posição do vetor
+let c = 1
+for(num[0] = c; num[0] < 10; c++ ){
+  console.log(num)
+}

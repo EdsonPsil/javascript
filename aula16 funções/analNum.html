@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>analNumJS</title>
+ <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+     <h1>Analizador de número</h1>
+  </header>
+
+  <section>
+    <div>
+     <p>Entre com números (entre 1 a 100): 
+       <input type="number" name="fnum" id="fnum" min="0" max="10">  
+       <input type="button" value="Adicionar" onclick="adNum()"></p>
+       <select name="flist" id="flist" size="10" ></select>
+       <br><br><input type="button" value="Finalizar" onclick="finalizar()">
+    </div> <br>
+    
+
+    <div id="res">
+    
+    </div>   
+  </section>
+  <footer>
+      <p>&copy Cursoemvideo</p>
+  </footer>
+<script src="analNum.js"></script>
+</body>
+</html>

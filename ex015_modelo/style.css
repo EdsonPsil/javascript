@@ -1,0 +1,70 @@
+body{
+background-color: rgba(0, 162, 255, 0.897);
+font: normal 15pt arial;
+
+}
+
+header{
+color: white;
+text-align: center;
+}
+#logo{
+  display: flex;
+  justify-items: end;
+  padding-left: 15px;
+
+  
+}
+.dlogo{
+  margin: -10px ;
+  height: auto;
+  background-image:linear-gradient(to right, black , #7e9fd5 );
+  
+  
+}
+section{
+  background-color: white;
+  width: 500px;
+  border-radius: 5px;
+  /* text-align: center; */
+  margin: auto;
+  padding: 10px;
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.37);
+
+}
+
+#bt{
+border-radius: 5px;
+margin-left: 10px;
+cursor: pointer;
+border-color: transparent;
+font: normal 12pt arial ;
+font-weight: bold;
+
+
+}
+.cx{
+  font-weight: bold;
+  width: 80px;
+ 
+}
+#bt:hover{
+  background-color: rgb(70, 76, 165);
+}
+p{
+  padding: 9px 0px 2px 5px;
+
+}
+ 
+
+div{
+  background-color: rgb(13, 27, 129);
+  color: white;
+  border-radius: 5px;
+}
+ 
+
+footer{
+  color: white;
+  text-align: center;
+}

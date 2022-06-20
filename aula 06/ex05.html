@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body{
+      background-color: rgb(81, 81, 199);
+      color: white;
+      font: normal 18pt arial;
+    }
+  </style>
+</head>
+<body>
+  <h1>Iniciando os estudos com DOM dom</h1>
+  <p>Aqui vai o resultado</p>
+  <p>Aprendendo usar o <strong>DOM</strong> em Java Script</p> 
+  <div>Comando por Marca getElementsByTagName </div>
+  <div class ="msg">Comando por class getElementsByclassName() </div>
+  <div id="msg1">Comando por ID getElementById()</div> 
+  <div name="msg2">Comando por nome getElementsByName()</div>
+  <div id="msg">Comando por seletor queryselector() e queryselectorAll()</div> 
+
+
+  <script>
+    var p1 = document.getElementsByTagName('p')[1] //seleciona o segundo parágrafo 
+    var d = document.getElementsByClassName('msg')[0] // comando com S deve usar o []
+    var d1 = window.document.getElementById('msg1')//como o comando não tem s dispensa a []
+
+    window.document.write('esta escrito assim: ' + p1.innerText)//texto sem formatação
+    window.document.write('<br/>esta escrito assim: ' + p1.innerHTML) //texto formatado
+
+    //modificando os selementos
+
+    p1.style.color = "blue" //muda a cor do parágrafo selecionado
+    // alert(p1.innerHTML) manda um alerta com o conteudo do parágrafo selecionado 
+    document.body.style.background = 'black'//muda a cor do body a qualquer momento
+    window.document.getElementsByName('msg2')[0].style.backgroundColor = 'gray'//Utilizando o comando em uma linha sem variável
+    d.style.background = 'green' 
+    d1.style.color = 'red'
+    document.querySelector('div#msg').style.color = 'green' //se usa # para selecionar ID e . (ponto) para class
+   
+    
+
+
+  </script>
+</body>
+</html>

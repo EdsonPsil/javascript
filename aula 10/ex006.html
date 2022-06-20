@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Eventos com DOM</title>
+  <style>
+    div#area{
+      font: normal 20pt arial;
+      background: rgb(43, 179, 43);
+      color: white;
+      width: 300px;
+      height: 300px;
+      line-height: 300px;
+      text-align: center; 
+    }
+    
+  </style>
+</head>
+<body>
+             <!--Criando os eventos no HTML-->
+  <!-- <div id ="area" onclick="clicar()" onmouseenter="entrar()" onmouseout=" saiu()">Interaja...</div> -->
+  <div id="area">Interaja...</div>
+  
+
+  <script>
+     var a = window.document.getElementById('area')
+    //  Criando eventos dentro do javascript
+    a.addEventListener('click', clicar)// aqui não precisa usar o on na frente do evento
+    a.addEventListener('mouseenter', entrou)
+    a.addEventListener('mouseout', saiu)
+  function clicar(){ 
+      a.innerText = 'clicar'
+      a.style.background = 'red'
+  } 
+  function entrou(){
+      a.innerText = 'entrou'
+  }
+  function saiu(){
+      a.innerText = 'saiu'
+      a.style.background = 'rgb(43, 179, 43)' 
+  }
+  </script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nacionalidade</title>
+</head>
+<style>
+  body{
+    background-color: darkgray;
+  }
+</style>
+<body>
+  <h1>Origem de nascimento</h1>
+  <P>Qual país você nasceu? <input type="text" name="ptxt" id="ptxt"> <input type="button" value="Verificar" onclick="origem()"></P>
+
+  <div id="pais"></div>
+
+  <script>
+    function origem(){
+      var ptxt1 = document.getElementById('ptxt')
+      var res = (ptxt1.value)
+      var pais = document.getElementById('pais')
+      pais.innerHTML =`Você nasceu no ${res}!`
+      if(res == 'Brasil'){
+        pais.innerHTML += '<br/><br/>Portanto você é Brasileiro!'
+      } else{
+        pais.innerHTML += '<br/><br/>Você é estrangeiro!'
+      }
+    }
+  </script>
+  
+</body>
+</html>
